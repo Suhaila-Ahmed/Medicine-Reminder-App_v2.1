@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
 
 class Snackbar {
   void showSnack(String message, GlobalKey<ScaffoldState> _scaffoldKey,
           Function undo) =>
-      _scaffoldKey.currentState.showSnackBar(
+      ScaffoldMessenger.of (context as BuildContext).showSnackBar(
         SnackBar(
           content: Text(message),
           action: undo != null ? SnackBarAction(
@@ -14,3 +15,5 @@ class Snackbar {
         ),
       );
 }
+//ScaffoldMessenger.of (context).showSnackBar (SnackBar (content
+// __scaffold Key.current State

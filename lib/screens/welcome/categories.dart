@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:medicine/screens/home/home.dart';
+import 'package:medicine/screens/welcome/welcome.dart';
 import '../../helpers/platform_flat_button.dart';
 import '../../screens/welcome/title_and_message.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/src/widgets/constants.dart';
 import 'package:medicine/screens/welcome/categories.dart';
 
 
-class Welcome extends StatelessWidget {
+
+class Categories extends StatelessWidget {
   var emailController=TextEditingController();
   var passwordController=TextEditingController();
   final ButtonStyle buttonPrimary= ElevatedButton.styleFrom(
@@ -37,47 +40,54 @@ class Welcome extends StatelessWidget {
             ),
             Image.asset(
 
-                //'assets/images/welcome_image.png',
-                //'assets/images/suhaila.jpg',
-              'assets/images/medicinee.jpg',
+              //'assets/images/welcome_image.png',
+              //'assets/images/suhaila.jpg',
+                'assets/images/categories.jpg',
 
 
-            width: double.infinity, height: deviceHeight* 0.4
-              ),
+                width: double.infinity, height: deviceHeight* 0.4
+            ),
             SizedBox(
               height: deviceHeight * 0.05,
             ),
+
+
+           /*
             TitleAndMessage(deviceHeight),
             SizedBox(
               height: deviceHeight * 0.03,
             ),
-            Container(
+            */
+
+
+           Container(
               height: deviceHeight * 0.09,
               width: double.infinity,
               child: Padding(
-                  padding: const EdgeInsets.only(left: 35.0, right: 35.0),
+                padding: const EdgeInsets.only(left: 35.0, right: 35.0),
 
 
-                  child:SizedBox(
-                    height: 50,
-                    width: 350,
-                    child:ElevatedButton(style: buttonPrimary
-                      ,onPressed: (){
-                        Navigator.push(context,
-                          MaterialPageRoute(
-                            builder: (context)=>Home(),
-                          ),
-                        );
-                      }, child: const Text("Get start now",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),),
+                child:SizedBox(
+                  height: 50,
+                  width: 350,
+                  child:ElevatedButton(style: buttonPrimary
+                    ,onPressed: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(
+                          builder: (context)=>Welcome(),
+                        ),
+                      );
+                    }, child: const Text("login",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),),
 
-                    ),
                   ),
+                ),
+                
 
-                  /*
+                /*
                   SizedBox(
                     height: 50,
                     width: 350,
@@ -111,7 +121,7 @@ class Welcome extends StatelessWidget {
 
                   ),*/
 
-                  /*Container(
+                /*Container(
 
                     color: Colors.blue,
                     width: double.infinity,
@@ -131,7 +141,7 @@ class Welcome extends StatelessWidget {
                         ),),),
                   ),*/
 
-                 /* PlatformFlatButton(
+                /* PlatformFlatButton(
                     handler: goToHomeScreen ,
                     color: Theme.of(context).primaryColor,
                     buttonChild: FittedBox(
@@ -146,6 +156,8 @@ class Welcome extends StatelessWidget {
                   )*/
               ),
             ),
+
+
           ],
         ),
       ),

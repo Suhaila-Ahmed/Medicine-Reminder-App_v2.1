@@ -4,6 +4,9 @@ import 'package:intl/intl.dart';
 import 'package:medicine/database/repository.dart';
 import 'package:medicine/models/pill.dart';
 import 'package:medicine/notifications/notifications.dart';
+import 'package:flutter/src/widgets/constants.dart';
+import 'package:medicine/screens/welcome/categories.dart';
+
 
 class MedicineCard extends StatelessWidget {
 
@@ -80,6 +83,7 @@ class MedicineCard extends StatelessWidget {
   //--------------------------| SHOW THE DELETE DIALOG ON THE SCREEN |-----------------------
 
   void _showDeleteDialog(BuildContext context, String medicineName, int medicineId, int notifyId) {
+    var primaryColor;
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -88,8 +92,13 @@ class MedicineCard extends StatelessWidget {
               contentTextStyle:
                   TextStyle(fontSize: 17.0, color: Colors.grey[800]),
               actions: [
-                FlatButton(
-                  splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
+                TextButton(
+                  style: ButtonStyle(
+                      overlayColor: MaterialStateColor.resolveWith(
+                              (states) => primaryColor.withOpacity(0.3))
+                  ),
+
+                  //splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
                   child: Text(
                     "Cancel",
                     style: TextStyle(color: Theme.of(context).primaryColor),
@@ -98,8 +107,13 @@ class MedicineCard extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                 ),
-                FlatButton(
-                  splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
+                TextButton(
+
+                  style: ButtonStyle(
+                      overlayColor: MaterialStateColor.resolveWith(
+                              (states) => primaryColor.withOpacity(0.3))
+                  ),
+                  //splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
                   child: Text("Delete",
                       style: TextStyle(color: Theme.of(context).primaryColor)),
                   onPressed: () async {
