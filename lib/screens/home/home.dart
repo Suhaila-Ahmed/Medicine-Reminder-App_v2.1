@@ -158,6 +158,7 @@ class _HomeState extends State<Home> {
                 ),
 
                 FloatingActionButton(
+
           elevation: 2.0,
           onPressed: () async {
         //refresh the pills from database

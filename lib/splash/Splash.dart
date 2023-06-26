@@ -40,14 +40,13 @@ class _Splash2State extends State<Splash2> with SingleTickerProviderStateMixin {
 
   }
 
-
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
         body: Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.blue,Colors.purple,],
+            gradient: LinearGradient(colors: [Color.fromRGBO(7, 190, 200, 1),Colors.white,],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),

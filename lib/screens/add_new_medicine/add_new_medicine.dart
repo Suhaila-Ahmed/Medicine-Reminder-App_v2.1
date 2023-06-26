@@ -172,24 +172,28 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
                         height: double.infinity,
                         child: PlatformFlatButton(
                           handler: () => openTimePicker(),
-                          buttonChild: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SizedBox(width: 10),
-                              Text(
-                                DateFormat.Hm().format(this.setDate),
-                                style: TextStyle(
-                                    fontSize: 32.0,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              SizedBox(width: 5),
-                              Icon(
-                                Icons.access_time,
-                                size: 30,
-                                color: Theme.of(context).primaryColor,
-                              )
-                            ],
+                          buttonChild: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(width: 10),
+                                Text(
+                                  DateFormat.Hm().format(this.setDate),
+                                  style: TextStyle(
+                                      fontSize: 25.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                SizedBox(width: 5),
+                                Icon(
+                                  Icons.access_time,
+                                  size: 30,
+                                  color:Colors.white
+                                  //Theme.of(context).primaryColor,
+                                )
+                              ],
+                            ),
                           ),
                           color: Color.fromRGBO(7, 190, 200, 0.1),
                         ),
@@ -203,24 +207,27 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
                         height: double.infinity,
                         child: PlatformFlatButton(
                           handler: () => openDatePicker(),
-                          buttonChild: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SizedBox(width: 10),
-                              Text(
-                                DateFormat("dd.MM").format(this.setDate),
-                                style: TextStyle(
-                                    fontSize: 32.0,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              SizedBox(width: 10),
-                              Icon(
-                                Icons.event,
-                                size: 30,
-                                color: Theme.of(context).primaryColor,
-                              )
-                            ],
+                          buttonChild: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(width: 10),
+                                Text(
+                                  DateFormat("dd.MM").format(this.setDate),
+                                  style: TextStyle(
+                                      fontSize: 25.0,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                                SizedBox(width: 10),
+                                Icon(
+                                  Icons.event,
+                                  size: 30,
+                                  color:Colors.white,
+                                )
+                              ],
+                            ),
                           ),
                           color: Color.fromRGBO(7, 190, 200, 0.1),
                         ),
@@ -234,14 +241,16 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
                 height: deviceHeight * 0.09,
                 width: double.infinity,
                 child: PlatformFlatButton(
+
                   handler: () async => savePill(),
-                  color: Theme.of(context).primaryColor,
+                  color: Colors.cyan,
+                  //Theme.of(context).primaryColor,
                   buttonChild: Text(
                     "Done",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
-                        fontSize: 17.0),
+                        fontSize: 23.0),
                   ),
                 ),
               )

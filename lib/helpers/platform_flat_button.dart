@@ -32,7 +32,9 @@ class PlatformFlatButton extends StatelessWidget {
             onPressed: this.handler,
             borderRadius: BorderRadius.circular(15.0),
           )
-        :/*SizedBox(
+
+    ///////////////////////BY ME////////////////////////////////
+        /*SizedBox(
       height: 50,
       width: 350,
       child:ElevatedButton(style: buttonPrimary
@@ -52,23 +54,58 @@ class PlatformFlatButton extends StatelessWidget {
     );*/
 
 
-    TextButton(
-            style: TextButton.styleFrom(
-              primary:Colors.cyan,
+    /////////////////////// END BY ME////////////////////////////////
+
+
+     :SingleChildScrollView(
+       child:MaterialButton(
+         color: Color.fromRGBO(7, 190, 200, 1),
+         height: 60.0,
+    shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(25.0),
+    ),
+    /*style: TextButton.styleFrom(
+              primary:Color.fromRGBO(7, 190, 200, 1),
               textStyle: TextStyle(
-                color: Colors.black,
+                color: Colors.cyan,
                // color: this.color,
               ),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)
+                  borderRadius: BorderRadius.circular(30.0)
               ),
+            ),*/
+
+    child:this.buttonChild,
+    onPressed: this.handler,
+
+    ),
+     );
+
+
+    /*:MaterialButton(
+            color: Color.fromRGBO(7, 190, 200, 1),
+            height: 4.0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0),
             ),
+            /*style: TextButton.styleFrom(
+              primary:Color.fromRGBO(7, 190, 200, 1),
+              textStyle: TextStyle(
+                color: Colors.cyan,
+               // color: this.color,
+              ),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0)
+              ),
+            ),*/
 
             child:this.buttonChild,
             onPressed: this.handler,
 
-          );
+          );*/
 
 
   }
 }
+
+

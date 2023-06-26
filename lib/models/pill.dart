@@ -10,6 +10,8 @@ class Pill {
   int time;
   int notifyId;
 
+  var lenght;
+
   Pill(
       {this.id,
       this.howManyWeeks,

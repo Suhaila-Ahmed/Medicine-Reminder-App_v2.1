@@ -15,7 +15,7 @@ class Categories extends StatelessWidget {
   final ButtonStyle buttonPrimary= ElevatedButton.styleFrom(
 
     maximumSize:Size(327, 50),
-    primary:Colors.cyan,
+    primary:Color.fromRGBO(7, 190, 200, 1),
     elevation: 0,
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(20),

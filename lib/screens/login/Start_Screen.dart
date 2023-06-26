@@ -17,7 +17,7 @@ class StartScreen extends StatelessWidget
   final ButtonStyle buttonPrimary= ElevatedButton.styleFrom(
 
     maximumSize:Size(350, 50),
-    primary:Colors.blue,
+    primary:Color.fromRGBO(7, 190, 200, 1),
     elevation: 0,
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(20),
@@ -58,9 +58,10 @@ class StartScreen extends StatelessWidget
 
   return Scaffold(
       appBar: AppBar(
+
         // عشان اعمل شادو تحت appbar
         elevation: 10.5,
-        backgroundColor:Colors.blue,
+        backgroundColor:Color.fromRGBO(7, 190, 200, 1),
       ),
 
       body:SafeArea(
@@ -85,7 +86,8 @@ class StartScreen extends StatelessWidget
 
                         style: TextStyle(
                           fontSize: 30.0,
-                          color: Colors.blue,
+                          color: Color.fromRGBO(7, 190, 200, 1),
+                          //Colors.cyan,
 
                         ),),
                     ),

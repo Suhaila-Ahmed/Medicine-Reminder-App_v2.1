@@ -33,14 +33,15 @@ class _Welcome2State extends State<Welcome2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan,
+      backgroundColor: Color.fromRGBO(7, 190, 200, 1),
+      //Color.fromRGBO(7, 190, 200, 1),
 
 
       bottomNavigationBar:CurvedNavigationBar(
         items:items,
         index: index,
-        backgroundColor: Colors.cyan,
-        color: Colors.purple.shade50,
+        backgroundColor: Color.fromRGBO(7, 190, 200, 1),
+        color: Colors.cyan.shade50,
         animationDuration: Duration(microseconds: 500),
         onTap:(selectedIndex){
           setState(() {
@@ -61,7 +62,7 @@ class _Welcome2State extends State<Welcome2> {
       ),
 
       body: Container(
-        color: Colors.blue,
+        color: Color.fromRGBO(7, 190, 200, 1),
         width: double.infinity,
         height: double.infinity,
         alignment: Alignment.center,
