@@ -4,6 +4,7 @@ import '../../helpers/platform_flat_button.dart';
 import '../../screens/welcome/title_and_message.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:medicine/screens/welcome/categories.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 
 class Welcome extends StatelessWidget {
@@ -51,7 +52,11 @@ class Welcome extends StatelessWidget {
             SizedBox(
               height: deviceHeight * 0.03,
             ),
-            Container(
+
+
+
+
+            /*Container(
               height: deviceHeight * 0.09,
               width: double.infinity,
               child: Padding(
@@ -61,7 +66,9 @@ class Welcome extends StatelessWidget {
                   child:SizedBox(
                     height: 50,
                     width: 350,
-                    child:ElevatedButton(style: buttonPrimary
+                    child:
+
+                    ElevatedButton(style: buttonPrimary
                       ,onPressed: (){
                         Navigator.push(context,
                           MaterialPageRoute(
@@ -145,7 +152,7 @@ class Welcome extends StatelessWidget {
                     ),
                   )*/
               ),
-            ),
+            ),*/
           ],
         ),
       ),

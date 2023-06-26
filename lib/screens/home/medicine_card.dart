@@ -20,6 +20,7 @@ class MedicineCard extends StatelessWidget {
     //check if the medicine time is lower than actual
     final bool isEnd = DateTime.now().millisecondsSinceEpoch > medicine.time;
 
+
     return Card(
         elevation: 0.0,
         margin: EdgeInsets.symmetric(vertical: 7.0),
@@ -49,21 +50,60 @@ class MedicineCard extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
-            trailing: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  DateFormat("HH:mm").format(
-                      DateTime.fromMillisecondsSinceEpoch(medicine.time)),
-                  style: TextStyle(
-                      color: Colors.grey[500],
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                      decoration: isEnd ? TextDecoration.lineThrough : null),
-                ),
-              ],
-            ),
-            leading: Container(
+
+
+
+
+          trailing: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                DateFormat("HH:mm").format(
+                    DateTime.fromMillisecondsSinceEpoch(medicine.time)),
+                style: TextStyle(
+                    color: Colors.grey[500],
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15,
+                    decoration: isEnd ? TextDecoration.lineThrough : null),
+              ),
+            ],
+          ),
+
+          // BT ME /////////////////////
+
+          /*trailing: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                DateFormat("HH:mm").format(
+                    DateTime.fromMillisecondsSinceEpoch(medicine.time)),
+                style: TextStyle(
+                    color: Colors.grey[500],
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15,
+                    decoration: isEnd ? TextDecoration.lineThrough : null),
+              ),
+
+              InkWell(
+                  onTap: (() {
+                    //
+                    setState(() {
+                      medicine.removeAt(context);
+
+                    });
+                    //
+                  }),
+                  child: const Icon(Icons.delete)),
+
+
+
+
+            ],
+          ),*/
+
+
+          ////////////////////////////
+           leading: Container(
               width: 60.0,
               height: 60.0,
               child: ClipRRect(
@@ -76,7 +116,17 @@ class MedicineCard extends StatelessWidget {
                       medicine.image
                     )),
               ),
-            )));
+            ),
+
+
+
+
+
+
+
+
+        ),
+    );
   }
 
 
@@ -126,6 +176,8 @@ class MedicineCard extends StatelessWidget {
               ],
             ));
   }
+
+  void setState(Null Function() param0) {}
   //============================================================================================
 
 

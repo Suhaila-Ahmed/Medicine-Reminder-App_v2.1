@@ -1,3 +1,5 @@
+import 'package:flutter/src/widgets/framework.dart';
+
 class Pill {
   int id;
   String name;
@@ -62,5 +64,7 @@ class Pill {
       default : return "assets/images/pills.png"; break;
     }
   }
+
+  void removeAt(BuildContext context) {}
   //=============================================================================
 }

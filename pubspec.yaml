@@ -36,6 +36,13 @@ dependencies:
   timezone: ^0.5.9
   animated_text_kit: ^2.5.3
   animated_widgets: ^1.0.6
+  lottie: ^1.1.0
+  flutter_spinkit: ^5.2.0
+  curved_navigation_bar: ^1.0.3
+
+
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

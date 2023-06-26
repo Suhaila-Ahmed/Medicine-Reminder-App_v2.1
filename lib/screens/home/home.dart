@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
     final double deviceHeight =
         MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top;
 
-    final Widget addButton = FloatingActionButton(
+    /*final Widget addButton = FloatingActionButton(
       elevation: 2.0,
       onPressed: () async {
         //refresh the pills from database
@@ -80,10 +80,10 @@ class _HomeState extends State<Home> {
         size: 24.0,
       ),
       backgroundColor: Theme.of(context).primaryColor,
-    );
+    );*/
 
     return Scaffold(
-      floatingActionButton: addButton,
+     // floatingActionButton: addButton,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: Color.fromRGBO(248, 248, 248, 1),
       body: SingleChildScrollView(
@@ -149,7 +149,37 @@ class _HomeState extends State<Home> {
                           speed: Duration(milliseconds: 150),
                         ),
                       )
-                    : MedicinesList(dailyPills,setData,flutterLocalNotificationsPlugin)
+                    : MedicinesList(dailyPills,setData,flutterLocalNotificationsPlugin),
+
+
+                // Add BY Me:
+                SizedBox(
+                  height: 30,
+                ),
+
+                FloatingActionButton(
+          elevation: 2.0,
+          onPressed: () async {
+        //refresh the pills from database
+        await Navigator.pushNamed(context, "/add_new_medicine")
+            .then((_) => setData());
+        },
+
+
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+            size: 24.0,
+          ),
+          backgroundColor: Theme.of(context).primaryColor,
+        ),
+
+
+                /////////// me end
+
+
+
+
               ],
             ),
           ),

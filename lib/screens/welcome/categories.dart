@@ -45,7 +45,8 @@ class Categories extends StatelessWidget {
                 'assets/images/categories.jpg',
 
 
-                width: double.infinity, height: deviceHeight* 0.4
+                width: double.infinity,
+                height: deviceHeight* 0.4
             ),
             SizedBox(
               height: deviceHeight * 0.05,
