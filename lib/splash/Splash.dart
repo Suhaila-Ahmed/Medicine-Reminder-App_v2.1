@@ -46,7 +46,7 @@ class _Splash2State extends State<Splash2> with SingleTickerProviderStateMixin {
         body: Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Color.fromRGBO(7, 190, 200, 1),Colors.white,],
+            gradient: LinearGradient(colors: [Colors.white,Color.fromRGBO(7, 190, 200, 1)],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),

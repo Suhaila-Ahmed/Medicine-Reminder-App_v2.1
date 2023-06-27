@@ -57,83 +57,83 @@ class StartScreen extends StatelessWidget
   { final double deviceHeight = MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top;
 
   return Scaffold(
-      appBar: AppBar(
+    appBar: AppBar(
 
-        // عشان اعمل شادو تحت appbar
-        elevation: 10.5,
-        backgroundColor:Color.fromRGBO(7, 190, 200, 1),
-      ),
+      // عشان اعمل شادو تحت appbar
+      elevation: 10.5,
+      backgroundColor:Color.fromRGBO(7, 190, 200, 1),
+    ),
 
-      body:SafeArea(
+    body:SafeArea(
 
-        child:Padding(
-          padding: const EdgeInsets.all(20.0),
-          //عشان ميحصلش ايررور ف الابعاد الطول
-          child: Center(
+      child:Padding(
+        padding: const EdgeInsets.all(20.0),
+        //عشان ميحصلش ايررور ف الابعاد الطول
+        child: Center(
 
-            child: SingleChildScrollView(
+          child: SingleChildScrollView(
 
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
 
-                  /*SizedBox(
+                /*SizedBox(
                   height: 10.0,
                 ),*/
-                  Container(
-                    child: Center(child: Text("welcom to the application ",
+                Container(
+                  child: Center(child: Text("welcom to the application ",
 
-                        style: TextStyle(
-                          fontSize: 30.0,
-                          color: Color.fromRGBO(7, 190, 200, 1),
-                          //Colors.cyan,
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      color: Color.fromRGBO(7, 190, 200, 1),
+                      //Colors.cyan,
 
-                        ),),
-                    ),
+                    ),),
                   ),
+                ),
 
-                   Image.asset(
+                Image.asset(
 
-                    //'https://avatars.githubusercontent.com/u/34492145?v=4',
+                  //'https://avatars.githubusercontent.com/u/34492145?v=4',
 
 
-                      'assets/images/medicinee.jpg',
+                    'assets/images/medicinee.jpg',
 
 
                     width: double.infinity,
-                      height: deviceHeight* 0.4
-                   // height: double.infinity,
+                    height: deviceHeight* 0.4
+                  // height: double.infinity,
+                ),
+                SizedBox(
+                  height:70.0,
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 350,
+                  child:ElevatedButton(style: buttonPrimary
+                    ,onPressed: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(
+                          builder: (context)=>Welcome2(),
+                        ),
+                      );
+                    }, child: const Text("Sign with geogle",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),),
+
                   ),
-                  SizedBox(
-                    height:70.0,
-                  ),
-                  SizedBox(
-                    height: 50,
-                    width: 350,
-                    child:ElevatedButton(style: buttonPrimary
-                      ,onPressed: (){
-                        Navigator.push(context,
-                          MaterialPageRoute(
-                            builder: (context)=>Welcome2(),
-                          ),
-                        );
-                      }, child: const Text("Sign with geogle",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),),
-
-                    ),
-                  ),
+                ),
 
 
-                  SizedBox(
-                    height: 20.0,
-                  ),
+                SizedBox(
+                  height: 20.0,
+                ),
 
 
 
-                  /*SizedBox(
+                /*SizedBox(
                     height: 50,
                     width: 350,
                     child:ElevatedButton(style: button_Primary
@@ -153,7 +153,7 @@ class StartScreen extends StatelessWidget
                   ),*/
 
 
-                  /*
+                /*
 
                 SizedBox(
                   height: 50,
@@ -182,9 +182,9 @@ class StartScreen extends StatelessWidget
 
                 ), */
 
-                  SizedBox(
-                    height: 10.0,
-                  ),
+                SizedBox(
+                  height: 10.0,
+                ),
 
 
 
@@ -195,16 +195,16 @@ class StartScreen extends StatelessWidget
 
 
 
-                ],
-              ),
-
-
+              ],
             ),
+
+
           ),
         ),
       ),
+    ),
 
 
-    );
+  );
   }
 }

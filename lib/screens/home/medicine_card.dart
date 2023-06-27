@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:intl/intl.dart';
+import 'package:medicine/database/pills_database.dart';
 import 'package:medicine/database/repository.dart';
 import 'package:medicine/models/pill.dart';
 import 'package:medicine/notifications/notifications.dart';
@@ -85,9 +86,13 @@ class MedicineCard extends StatelessWidget {
               ),
 
               InkWell(
+
                   onTap: (() {
                     //
                     setState(() {
+
+                     // Repository().deleteData('Pills',  medicine as PillsDatabase);
+
                       medicine.removeAt(context);
 
                     });
@@ -142,13 +147,10 @@ class MedicineCard extends StatelessWidget {
           contentTextStyle:
           TextStyle(fontSize: 17.0, color: Colors.grey[800]),
           actions: [
-            TextButton(
-              style: ButtonStyle(
-                  overlayColor: MaterialStateColor.resolveWith(
-                          (states) => primaryColor.withOpacity(0.3))
-              ),
+            MaterialButton(
 
-              //splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
+
+              splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
               child: Text(
                 "Cancel",
                 style: TextStyle(color: Theme.of(context).primaryColor),
@@ -157,13 +159,10 @@ class MedicineCard extends StatelessWidget {
                 Navigator.of(context).pop();
               },
             ),
-            TextButton(
+            MaterialButton(
 
-              style: ButtonStyle(
-                  overlayColor: MaterialStateColor.resolveWith(
-                          (states) => primaryColor.withOpacity(0.3))
-              ),
-              //splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
+
+              splashColor: Theme.of(context).primaryColor.withOpacity(0.3),
               child: Text("Delete",
                   style: TextStyle(color: Theme.of(context).primaryColor)),
               onPressed: () async {
