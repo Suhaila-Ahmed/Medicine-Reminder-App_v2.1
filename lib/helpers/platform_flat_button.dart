@@ -59,8 +59,8 @@ class PlatformFlatButton extends StatelessWidget {
 
      :SingleChildScrollView(
        child:MaterialButton(
-         color: Color.fromRGBO(7, 190, 200, 1),
-         height: 60.0,
+         color: Color.fromRGBO(22, 74, 74, 1.0),
+         height: 50.0,
     shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(25.0),
     ),

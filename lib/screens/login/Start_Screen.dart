@@ -17,7 +17,7 @@ class StartScreen extends StatelessWidget
   final ButtonStyle buttonPrimary= ElevatedButton.styleFrom(
 
     maximumSize:Size(350, 50),
-    primary:Color.fromRGBO(7, 190, 200, 1),
+    primary:Color.fromRGBO(22, 74, 74, 1.0),
     elevation: 0,
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(20),
@@ -57,12 +57,14 @@ class StartScreen extends StatelessWidget
   { final double deviceHeight = MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top;
 
   return Scaffold(
-    appBar: AppBar(
+
+    backgroundColor:Color.fromRGBO(246, 239, 220, 1.0) ,
+    /*appBar: AppBar(
 
       // عشان اعمل شادو تحت appbar
       elevation: 10.5,
-      backgroundColor:Color.fromRGBO(7, 190, 200, 1),
-    ),
+      backgroundColor:Color.fromRGBO(22, 74, 74, 1.0),
+    ),*/
 
     body:SafeArea(
 
@@ -86,7 +88,7 @@ class StartScreen extends StatelessWidget
 
                     style: TextStyle(
                       fontSize: 30.0,
-                      color: Color.fromRGBO(7, 190, 200, 1),
+                      color: Color.fromRGBO(22, 74, 74, 1.0),
                       //Colors.cyan,
 
                     ),),
@@ -98,7 +100,7 @@ class StartScreen extends StatelessWidget
                   //'https://avatars.githubusercontent.com/u/34492145?v=4',
 
 
-                    'assets/images/medicinee.jpg',
+                    'assets/images/ourWatch.png',
 
 
                     width: double.infinity,
@@ -121,6 +123,7 @@ class StartScreen extends StatelessWidget
                     }, child: const Text("Sign with geogle",
                       style: TextStyle(
                         fontSize: 20,
+                        color: Color.fromRGBO(246, 239, 220, 1.0),
                       ),),
 
                   ),

@@ -23,6 +23,7 @@ class FormFields extends StatelessWidget {
           Container(
             height: constrains.maxHeight * 0.22,
             child: TextField(
+              cursorColor:Color.fromRGBO(173, 219, 208, 1.0),
               textInputAction: TextInputAction.next,
               controller: nameController,
               style: TextStyle(
@@ -32,11 +33,45 @@ class FormFields extends StatelessWidget {
               decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(
                       horizontal: 15.0, vertical: 20.0),
-                  labelText: "Pills Name",
-                  border: OutlineInputBorder(
+                label:Text("pill name ",style: (
+                    TextStyle(
+                      color: Color.fromRGBO(22, 74, 74, 1.0),
+                    )
+                ),),
+
+                enabledBorder: (
+
+                    OutlineInputBorder(borderSide: BorderSide(
+                      width: 0.9,
+                      color:Colors.grey,),
+                      borderRadius: BorderRadius.circular(10.0),
+                    )
+                ),
+
+                focusedBorder: (
+                    OutlineInputBorder(borderSide: BorderSide
+                      (width: 0.9,
+                      color:Color.fromRGBO(22, 74, 74, 1.0) ,
+                    ),
+                      borderRadius: BorderRadius.circular(10.0),
+
+                    )
+
+                ),
+
+
+                  /*border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide:
-                      BorderSide(width: 0.5, color: Colors.grey))),
+                      BorderSide(width: 0.5,
+                        color:Colors.grey
+                        //fromRGBO(173, 219, 208, 1.0),
+                      //Colors.grey
+                      ))*/
+
+
+
+              ),
               onSubmitted: (val)=>focus.nextFocus(),
             ),
           ),
@@ -50,6 +85,8 @@ class FormFields extends StatelessWidget {
                 child: Container(
                   height: constrains.maxHeight * 0.22,
                   child: TextField(
+                    cursorColor:Color.fromRGBO(173, 219, 208, 1.0),
+
                     controller: amountController,
                     keyboardType: TextInputType.number,
                     style: TextStyle(
@@ -59,11 +96,39 @@ class FormFields extends StatelessWidget {
                     decoration: InputDecoration(
                         contentPadding: EdgeInsets.symmetric(
                             horizontal: 15.0, vertical: 20.0),
-                        labelText: "Pills Amount",
-                        border: OutlineInputBorder(
+                        label:Text("pill amount ",style: (
+                        TextStyle(
+                          color: Color.fromRGBO(22, 74, 74, 1.0),
+                        )
+                        ),),
+
+
+                        enabledBorder: (
+                        OutlineInputBorder(borderSide: BorderSide(
+                          width: 0.9,
+                            color:Colors.grey,),
+                          borderRadius: BorderRadius.circular(10.0),
+                        )
+                        ),
+
+                      focusedBorder: (
+                          OutlineInputBorder(borderSide: BorderSide
+                            (width: 0.9,
+                              color:Color.fromRGBO(22, 74, 74, 1.0) ,
+                          ),
+                            borderRadius: BorderRadius.circular(10.0),
+
+                          )
+
+                      ),
+                        /*border: OutlineInputBorder(
+
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(
-                                width: 0.5, color: Colors.grey))),
+                                width: 0.5, color: Colors.grey)),*/
+
+
+                    ),
                     onSubmitted: (val)=>focus.unfocus(),
                   ),
                 ),
@@ -80,11 +145,40 @@ class FormFields extends StatelessWidget {
                     decoration: InputDecoration(
                         contentPadding: EdgeInsets.symmetric(
                             horizontal: 15.0, vertical: 20.0),
-                        labelText: "Type",
-                        border: OutlineInputBorder(
+                      label:Text("type ",style: (
+                          TextStyle(
+                            color: Color.fromRGBO(22, 74, 74, 1.0),
+                          )
+                      ),),
+
+
+                      enabledBorder: (
+                          OutlineInputBorder(borderSide: BorderSide(
+                            width: 0.9,
+                            color:Colors.grey,),
+                            borderRadius: BorderRadius.circular(10.0),
+                          )
+                      ),
+
+                      focusedBorder: (
+                          OutlineInputBorder(borderSide: BorderSide
+                            (width: 0.9,
+                            color:Color.fromRGBO(22, 74, 74, 1.0) ,
+                          ),
+                            borderRadius: BorderRadius.circular(10.0),
+
+                          )
+
+                      ),
+
+
+                        /*border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(
-                                width: 0.5, color: Colors.grey))),
+                                width: 0.5, color: Colors.grey))*/
+
+
+                    ),
                     items: weightValues
                         .map((weight) => DropdownMenuItem(
                       child: Text(weight),

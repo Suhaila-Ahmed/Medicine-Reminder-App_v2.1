@@ -46,7 +46,11 @@ class _Splash2State extends State<Splash2> with SingleTickerProviderStateMixin {
         body: Container(
           width: double.infinity,
           decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.white,Color.fromRGBO(7, 190, 200, 1)],
+            gradient: LinearGradient(colors: [Color.fromRGBO(173, 219, 208, 1.0)
+            ,Color.fromRGBO(246, 239, 220, 1.0)
+
+
+              ,],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),
@@ -59,13 +63,16 @@ class _Splash2State extends State<Splash2> with SingleTickerProviderStateMixin {
                 height: 50,
               ),
 
-              //Image.asset('assets/watch.jpg'),
 
 
 
-              Icon(Icons.watch,
+              Image.asset('assets/images/ourWatch.png'),
+
+
+
+              /*Icon(Icons.watch,
                 size: 80,
-                color: Colors.white,),
+                color: Color.fromRGBO(22, 74, 74, 1.0),),*/
 
 
               SizedBox(
@@ -75,7 +82,7 @@ class _Splash2State extends State<Splash2> with SingleTickerProviderStateMixin {
               Text("welcome app",style: TextStyle(
                 fontStyle: FontStyle.italic,
                 fontSize: 32,
-                color: Colors.white,
+                color: Color.fromRGBO(22, 74, 74, 1.0),
 
               ),
               ),
@@ -85,7 +92,7 @@ class _Splash2State extends State<Splash2> with SingleTickerProviderStateMixin {
 
               ),
 
-              SpinKitSpinningLines(color: Colors.white,
+              SpinKitSpinningLines(color:Color.fromRGBO(22, 74, 74, 1.0),
                 size: 50,)
 
 

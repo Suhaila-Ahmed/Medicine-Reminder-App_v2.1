@@ -83,9 +83,10 @@ class _HomeState extends State<Home> {
     );*/
 
     return Scaffold(
-     // floatingActionButton: addButton,
+
+      // floatingActionButton: addButton,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      backgroundColor: Color.fromRGBO(248, 248, 248, 1),
+      backgroundColor: Color.fromRGBO(246, 239, 220, 1.0),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
@@ -169,10 +170,12 @@ class _HomeState extends State<Home> {
 
           child: Icon(
             Icons.add,
-            color: Colors.white,
+            color: Color.fromRGBO(22, 74, 74, 1.0),
+            //Colors.white,
             size: 24.0,
           ),
-          backgroundColor: Theme.of(context).primaryColor,
+          backgroundColor: Color.fromRGBO(173, 219, 208, 1.0)
+          //Theme.of(context).primaryColor,
         ),
 
 

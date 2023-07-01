@@ -15,7 +15,7 @@ class Categories extends StatelessWidget {
   final ButtonStyle buttonPrimary= ElevatedButton.styleFrom(
 
     maximumSize:Size(327, 50),
-    primary:Color.fromRGBO(7, 190, 200, 1),
+    primary:Color.fromRGBO(22, 74, 74, 1.0),
     elevation: 0,
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(20),
@@ -32,7 +32,10 @@ class Categories extends StatelessWidget {
     void goToHomeScreen() => Navigator.pushReplacementNamed(context, "/home");
 
     return Scaffold(
+      backgroundColor: Color.fromRGBO(246, 239, 220, 1.0),
+
       body: SafeArea(
+
         child: Column(
           children: [
             SizedBox(
@@ -81,7 +84,7 @@ class Categories extends StatelessWidget {
                     }, child: const Text("login",
                       style: TextStyle(
                         fontSize: 20,
-                        color: Colors.white,
+                        color: Color.fromRGBO(246, 239, 220, 1.0),
                       ),),
 
                   ),

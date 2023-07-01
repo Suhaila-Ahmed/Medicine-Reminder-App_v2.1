@@ -34,7 +34,7 @@ class _CalendarDayState extends State<CalendarDay> {
               radius: constrains.maxHeight * 0.25,
               backgroundColor: widget.day.isChecked
                   ? Theme.of(context).primaryColor
-                  : Colors.transparent,
+                  : Colors.transparent ,
               child: Padding(
                 padding: const EdgeInsets.all(2.0),
                 child: Text(

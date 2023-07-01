@@ -25,7 +25,7 @@ class MedicineCard extends StatelessWidget {
     return Card(
       elevation: 0.0,
       margin: EdgeInsets.symmetric(vertical: 7.0),
-      color: Colors.white,
+      color: Colors.white54,
       child: ListTile(
         shape:
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -140,10 +140,11 @@ class MedicineCard extends StatelessWidget {
   void _showDeleteDialog(BuildContext context, String medicineName, int medicineId, int notifyId) {
     var primaryColor;
     showDialog(
+
         context: context,
         builder: (context) => AlertDialog(
           title: Text("Delete ?"),
-          content: Text("Are you sure to delete $medicineName medicine?"),
+          content: Text(" Are you sure to delete $medicineName medicine?"),
           contentTextStyle:
           TextStyle(fontSize: 17.0, color: Colors.grey[800]),
           actions: [

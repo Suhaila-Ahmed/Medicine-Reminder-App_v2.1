@@ -18,13 +18,13 @@ class _Welcome2State extends State<Welcome2> {
 
   final items=const [
     Icon(Icons.home,
-      color: Colors.black,),
+      color: Color.fromRGBO(246, 239, 220, 1.0)),
     Icon(Icons.access_alarms_sharp,
-      color: Colors.black,),
+      color: Color.fromRGBO(246, 239, 220, 1.0),),
     /*Icon(Icons.medication,
       color: Colors.black,),*/
     Icon(Icons.monitor_heart,
-      color: Colors.black,),
+      color: Color.fromRGBO(246, 239, 220, 1.0),),
 
 
   ];
@@ -33,15 +33,15 @@ class _Welcome2State extends State<Welcome2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(7, 190, 200, 1),
+      backgroundColor:Color.fromRGBO(246, 239, 220, 1.0) ,
       //Color.fromRGBO(7, 190, 200, 1),
 
 
       bottomNavigationBar:CurvedNavigationBar(
         items:items,
         index: index,
-        backgroundColor: Color.fromRGBO(7, 190, 200, 1),
-        color: Colors.cyan.shade50,
+        backgroundColor: Color.fromRGBO(173, 219, 208, 1.0),
+        color:Color.fromRGBO(17, 115, 115, 1.0),
         animationDuration: Duration(microseconds: 500),
         onTap:(selectedIndex){
           setState(() {

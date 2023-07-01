@@ -78,9 +78,10 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
     final deviceHeight = MediaQuery.of(context).size.height - 60.0;
 
     return Scaffold(
+
       key: _scaffoldKey,
       resizeToAvoidBottomInset: false,
-      backgroundColor: Color.fromRGBO(248, 248, 248, 1),
+      backgroundColor: Color.fromRGBO(246, 239, 220, 1.0),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
@@ -182,14 +183,14 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
                                   DateFormat.Hm().format(this.setDate),
                                   style: TextStyle(
                                       fontSize: 25.0,
-                                      color: Colors.white,
+                                      color: Color.fromRGBO(246, 239, 220, 1.0),
                                       fontWeight: FontWeight.w500),
                                 ),
                                 SizedBox(width: 5),
                                 Icon(
                                   Icons.access_time,
                                   size: 30,
-                                  color:Colors.white
+                                  color:Color.fromRGBO(246, 239, 220, 1.0)
                                   //Theme.of(context).primaryColor,
                                 )
                               ],
@@ -217,14 +218,14 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
                                   DateFormat("dd.MM").format(this.setDate),
                                   style: TextStyle(
                                       fontSize: 25.0,
-                                      color: Colors.white,
+                                      color: Color.fromRGBO(246, 239, 220, 1.0),
                                       fontWeight: FontWeight.w500),
                                 ),
                                 SizedBox(width: 10),
                                 Icon(
                                   Icons.event,
                                   size: 30,
-                                  color:Colors.white,
+                                  color:Color.fromRGBO(246, 239, 220, 1.0),
                                 )
                               ],
                             ),
@@ -243,12 +244,12 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
                 child: PlatformFlatButton(
 
                   handler: () async => savePill(),
-                  color: Colors.cyan,
+                  color: Colors.black,
                   //Theme.of(context).primaryColor,
                   buttonChild: Text(
                     "Done",
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Color.fromRGBO(246, 239, 220, 1.0),
                         fontWeight: FontWeight.w600,
                         fontSize: 23.0),
                   ),

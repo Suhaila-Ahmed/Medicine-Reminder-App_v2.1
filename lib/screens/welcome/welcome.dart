@@ -30,6 +30,8 @@ class Welcome extends StatelessWidget {
     void goToHomeScreen() => Navigator.pushReplacementNamed(context, "/home");
 
     return Scaffold(
+      backgroundColor: Color.fromRGBO(246, 239, 220, 1.0),
+
       body: SafeArea(
         child: Column(
           children: [

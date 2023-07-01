@@ -25,10 +25,12 @@ class MedicineApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       debugShowCheckedModeBanner:false,
       theme: ThemeData(
           fontFamily: "Popins",
-          primaryColor: Color.fromRGBO(7, 190, 200, 1),
+          primaryColor: Color.fromRGBO(173, 219, 208, 1.0),
+          //Color.fromRGBO(7, 190, 200, 1),
           textTheme: TextTheme(
               headline1: ThemeData.light().textTheme.headline1.copyWith(
                     fontWeight: FontWeight.w700,
